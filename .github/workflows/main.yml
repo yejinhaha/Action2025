@@ -1,0 +1,19 @@
+# my first workflow
+
+name : My first workflow
+
+on : [push, pull_request]
+
+jobs:
+  job_1:
+    name: my first job
+    runs-on : ununtu-lateast
+  # job_2:
+  #   name: my second job
+  #   needs: jobs_1
+  # job_3:
+  #   name: my third job
+  #   needs: [job_1, job_2]
+
+
+    
