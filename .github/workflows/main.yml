@@ -13,11 +13,14 @@ jobs:
 
     steps:
       - uses: actions/setup-node@v2
-        with:
-          node-version: ${{ matrix.node_version }}
-      
-      - name: Check Node.js version
-        run: node -v
+      - name: Install Dependencies
+        run: |
+          npm ci 
+          npm run build
+        working-directory : ./temp
+        shell : bash
+        
+        
 
     
   # job_2:
